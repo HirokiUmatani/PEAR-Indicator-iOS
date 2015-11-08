@@ -4,8 +4,7 @@
 ### Overview
 This is indicator of library for ios.
 
-### Demo
-	
+### Demo Screen
 [![autolayout_demo](http://pear.chat/image/indicator-demo-o.gif)]
 
 ### Installation

@@ -16,6 +16,32 @@
 @end
 
 @implementation IndicatorView
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+       
+        self = [self loadXib];
+        [self setInitialData];
+        [self loadingAnimation];
+        return self;
+    }
+    return self;
+}
+- (id)initWithTarget:(UIView *)view
+{
+    self = [super init];
+    if (self)
+    {
+        self = [self loadXib];
+        [self setInitialData];
+        [self setFrameToView:view];
+        [self loadingAnimation];
+        return self;
+    }
+    return self;
+}
 - (id)initWithTarget:(UIView *)view
           userEnable:(BOOL)userEnable
              message:(NSString *)message
@@ -26,7 +52,8 @@
     if (self)
     {
         self = [self loadXib];
-        [self setInitialData:(BOOL)userEnable];
+        [self setInitialData];
+        [self setUserEnable:userEnable];
         [self setFrameToView:view];
         [self setMessage:message];
         [self setBackgroundColor:backgroundColor];
@@ -46,13 +73,16 @@
     }
                      completion:^(BOOL finished)
     {
-        [self removeFromSuperview];
+        
         _view.userInteractionEnabled = YES;
+        
+        [self removeFromSuperview];
     }];
 }
 - (void)start
 {
     _view.userInteractionEnabled = _userEnable;
+    
     [UIView animateWithDuration:0.8
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -60,18 +90,22 @@
     {
         self.alpha = 1.0;
         self.transform = CGAffineTransformIdentity;
-    } completion:^(BOOL finished) {
+    }
+                     completion:^(BOOL finished) {
         
     }];
     
 }
 
-- (void)setInitialData:(BOOL)userEnable
+- (void)setUserEnable:(BOOL)userEnable
 {
     _userEnable = userEnable;
+}
+- (void)setInitialData
+{
+    _userEnable = NO;
     self.alpha = 0.0;
     CGAffineTransform t1 = CGAffineTransformMakeScale(-7,-0.5);
-
     self.transform = t1;
     _backView.layer.cornerRadius = 90;
     _backView.clipsToBounds = true;

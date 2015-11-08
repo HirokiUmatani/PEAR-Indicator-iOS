@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface IndicatorView : UIView
+- (id)initWithTarget:(UIView *)view;
+
 - (id)initWithTarget:(UIView *)view
           userEnable:(BOOL)userEnable
              message:(NSString *)message

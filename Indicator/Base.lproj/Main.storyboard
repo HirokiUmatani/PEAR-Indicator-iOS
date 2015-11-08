@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEb-0U-PWW">
-                                <rect key="frame" x="250" y="431" width="100" height="100"/>
+                                <rect key="frame" x="250" y="434" width="100" height="100"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="HLb-vw-vgx"/>
@@ -34,12 +34,16 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mEb-0U-PWW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4BU-b7-kmH"/>
+                            <constraint firstItem="mEb-0U-PWW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7fe-tU-YSl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mEb-0U-PWW" secondAttribute="bottom" constant="66" id="9F0-1l-uF4"/>
                             <constraint firstItem="mEb-0U-PWW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kl4-lW-eIc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mEb-0U-PWW" secondAttribute="bottom" constant="69" id="xHl-8M-ncK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="4BU-b7-kmH"/>
+                                <exclude reference="7fe-tU-YSl"/>
+                                <exclude reference="xHl-8M-ncK"/>
                             </mask>
                         </variation>
                     </view>

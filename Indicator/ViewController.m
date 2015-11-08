@@ -22,18 +22,36 @@
 
 - (IBAction)indicatorStart:(UIButton *)sender
 {
-    // create
-    _indicator = [[IndicatorView alloc]initWithTarget:self.view
+
+    
+    // create sample 1
+    /*
+    _indicator =[IndicatorView new];
+    _indicator.frame = CGRectMake(0, 0, self.view.window.frame.size.width, self.view.window.frame.size.height);
+    [self.view.window addSubview:_indicator];
+    */
+    
+    
+    // create sample2
+    /*
+     _indicator = [[IndicatorView alloc] initWithTarget:self.view.window];
+    */
+    
+    
+    // create sample3
+    _indicator = [[IndicatorView alloc]initWithTarget:self.view.window
                                            userEnable:YES
-                                              message:@"Now Loading ..."
-                                      backgroundColor:[UIColor blackColor]
+                                              message:@"UPLOAD"
+                                      backgroundColor:[UIColor colorWithRed:0.0/255.0
+                                                                      green:80.0/255.0
+                                                                       blue:0.0/255.0 alpha:1.0]
                                             fontColor:[UIColor whiteColor]];
     // start
     [_indicator start];
     
-    //stop (after 5 second)
+    // stop (after 3 second)
     [self performSelector:@selector(indicatorStop)
-               withObject:nil afterDelay:5.0f];
+               withObject:nil afterDelay:3.0f];
 }
 - (void)indicatorStop
 {

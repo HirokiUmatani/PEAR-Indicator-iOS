@@ -12,17 +12,21 @@
 @property (weak, nonatomic) IBOutlet UIView *backView;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (strong,nonatomic) UIView *view;
+@property (assign,nonatomic) BOOL userEnable;
 @end
 
 @implementation IndicatorView
 - (id)initWithTarget:(UIView *)view
-             message:(NSString *)message backgroundColor:(UIColor *)backgroundColor fontColor:(UIColor *)fontColor
+          userEnable:(BOOL)userEnable
+             message:(NSString *)message
+     backgroundColor:(UIColor *)backgroundColor
+           fontColor:(UIColor *)fontColor
 {
     self = [super init];
     if (self)
     {
         self = [self loadXib];
-        [self setInitialData];
+        [self setInitialData:(BOOL)userEnable];
         [self setFrameToView:view];
         [self setMessage:message];
         [self setBackgroundColor:backgroundColor];
@@ -48,7 +52,7 @@
 }
 - (void)start
 {
-    _view.userInteractionEnabled = NO;
+    _view.userInteractionEnabled = _userEnable;
     [UIView animateWithDuration:0.8
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -62,8 +66,9 @@
     
 }
 
-- (void)setInitialData
+- (void)setInitialData:(BOOL)userEnable
 {
+    _userEnable = userEnable;
     self.alpha = 0.0;
     CGAffineTransform t1 = CGAffineTransformMakeScale(-7,-0.5);
 

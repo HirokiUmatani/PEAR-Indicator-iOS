@@ -10,6 +10,7 @@
 
 @interface IndicatorView : UIView
 - (id)initWithTarget:(UIView *)view
+          userEnable:(BOOL)userEnable
              message:(NSString *)message
      backgroundColor:(UIColor *)backgroundColor
            fontColor:(UIColor *)fontColor;

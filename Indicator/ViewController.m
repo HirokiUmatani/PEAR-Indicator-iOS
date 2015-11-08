@@ -24,6 +24,7 @@
 {
     // create
     _indicator = [[IndicatorView alloc]initWithTarget:self.view
+                                           userEnable:YES
                                               message:@"Now Loading ..."
                                       backgroundColor:[UIColor blackColor]
                                             fontColor:[UIColor whiteColor]];

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFit" id="iN0-l3-epB" customClass="IndicatorView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ad-hX-bmM">
+                    <rect key="frame" x="210" y="210" width="180" height="180"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="gHQ-oW-xtr"/>
+                        <constraint firstAttribute="height" constant="180" id="yuN-Zq-Jhp"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading.png" translatesAutoresizingMaskIntoConstraints="NO" id="zJu-le-XOS">
+                    <rect key="frame" x="210" y="210" width="180" height="180"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="XcZ-z5-CjO"/>
+                        <constraint firstAttribute="width" constant="180" id="dC4-DX-Rzi"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Loading ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cep-Tr-FKS" userLabel="Message Label">
+                    <rect key="frame" x="241" y="266" width="118" height="68"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="6vR-Jp-BfZ"/>
+                        <constraint firstAttribute="width" constant="118" id="Uhg-gK-unV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5ad-hX-bmM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="19I-KC-pjd"/>
+                <constraint firstItem="Cep-Tr-FKS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bzk-xX-7LB"/>
+                <constraint firstItem="5ad-hX-bmM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bDg-Rx-ke1"/>
+                <constraint firstItem="zJu-le-XOS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fTM-yf-2tA"/>
+                <constraint firstItem="Cep-Tr-FKS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gQZ-0b-MXh"/>
+                <constraint firstItem="zJu-le-XOS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="umt-OS-jYK"/>
+            </constraints>
+            <connections>
+                <outlet property="backView" destination="5ad-hX-bmM" id="K0d-C7-S7a"/>
+                <outlet property="imageView" destination="zJu-le-XOS" id="dkk-uE-oK8"/>
+                <outlet property="messageLabel" destination="Cep-Tr-FKS" id="H6k-ET-TBn"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="loading.png" width="340" height="340"/>
+    </resources>
+</document>

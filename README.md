@@ -12,6 +12,29 @@ This ios library will display the cool indicator in something load.
 pod 'PEAR-Indicator-iOS'
 </code>
 
+### Usage
+
+#####□import  
+<code>
+ #import "IndicatorView.h"
+</code>
+
+#####□create instance  
+@pram  
+ target:(UIView) paste the indicator View  
+ userEnable:(BOOL)It can be touched in the indicator displayed in the other views  
+ message:(NSString) message in the loading  
+ backGroundColor:(UIColor)background color of the indicator  
+ fontColor:(UIColor)Text color of the loading message  
+ 
+<code>
+IndicatorView *indicator = [[IndicatorView alloc]initWithTarget:self.view
+                             userEnable:YES  
+                             message:@"Now Loading .."
+                             backgroundColor:[UIColor blackColor]  
+                             fontColor:[UIColor whiteColor]];  
+</code>
+
 ### Document
 [document library](http://cocoadocs.org/docsets/PEAR-Indicator-iOS)
 

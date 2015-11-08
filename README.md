@@ -20,19 +20,13 @@ pod 'PEAR-Indicator-iOS'
 ```
 
 #####□create instance  
-@pram  
- target:(UIView) paste the indicator View  
- userEnable:(BOOL)It can be touched in the indicator displayed in the other views  
- message:(NSString) message in the loading  
- backGroundColor:(UIColor)background color of the indicator  
- fontColor:(UIColor)Text color of the loading message  
- 
+
 ``` Objective−C
-IndicatorView *indicator = [[IndicatorView alloc]initWithTarget:self.view  
-                                                     userEnable:YES  
-                                                        message:@"Now Loading .."  
-                                                backgroundColor:[UIColor blackColor]  
-                                                      fontColor:[UIColor whiteColor]];  
+IndicatorView *indicator = [[IndicatorView alloc]initWithTarget:self.view // paste the indicator View
+                                                     userEnable:YES // It can be touched in the indicator displayed in the other views
+                                                        message:@"Now Loading .." // message in the loading
+                                                backgroundColor:[UIColor blackColor] // background color of the indicator
+                                                      fontColor:[UIColor whiteColor]]; // Text color of the loading message
 ```
 
 ### Document

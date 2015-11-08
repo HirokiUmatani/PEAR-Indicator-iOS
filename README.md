@@ -2,7 +2,7 @@
 
 ====
 ### Overview
-This is indicator of library for ios.
+This ios library will display the cool indicator in something load.
 
 ### Demo Screen
 [![autolayout_demo](http://pear.chat/image/indicator-demo-o.gif)]
@@ -11,6 +11,23 @@ This is indicator of library for ios.
 <code>
 pod 'PEAR-Indicator-iOS'
 </code>
+
+### Usage
+
+#####□import  
+``` Objective-C
+#import "IndicatorView.h"
+```
+
+#####□create instance  
+
+``` Objective−C
+IndicatorView *indicator = [[IndicatorView alloc]initWithTarget:self.view // paste the indicator View
+                                                     userEnable:YES // It can be touched in the indicator displayed in the other views
+                                                        message:@"Now Loading .." // message in the loading
+                                                backgroundColor:[UIColor blackColor] // background color of the indicator
+                                                      fontColor:[UIColor whiteColor]]; // Text color of the loading message
+```
 
 ### Document
 [document library](http://cocoadocs.org/docsets/PEAR-Indicator-iOS)

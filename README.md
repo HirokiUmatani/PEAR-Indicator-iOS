@@ -2,7 +2,7 @@
 
 ====
 ### Overview
-This is indicator of library for ios.
+This ios library will display the cool indicator in something load.
 
 ### Demo Screen
 [![autolayout_demo](http://pear.chat/image/indicator-demo-o.gif)]

@@ -111,7 +111,6 @@
 		F4C29AA21BEDEC3E0007D4B9 /* Indicator */ = {
 			isa = PBXGroup;
 			children = (
-				F4C29AE61BEE703C0007D4B9 /* loading.png */,
 				F4C29AE81BEF010F0007D4B9 /* start button.png */,
 				F4C29AA61BEDEC3E0007D4B9 /* AppDelegate.h */,
 				F4C29AA71BEDEC3E0007D4B9 /* AppDelegate.m */,
@@ -155,11 +154,20 @@
 		F4C29AD61BEDEC4B0007D4B9 /* PEAR-Indicator-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F4C29AEE1BEF22E10007D4B9 /* resource */,
 				F4C29AD71BEDECAE0007D4B9 /* IndicatorView.h */,
 				F4C29AD81BEDECAE0007D4B9 /* IndicatorView.m */,
-				F4C29ADA1BEDECBA0007D4B9 /* IndicatorView.xib */,
 			);
 			path = "PEAR-Indicator-iOS";
+			sourceTree = "<group>";
+		};
+		F4C29AEE1BEF22E10007D4B9 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				F4C29ADA1BEDECBA0007D4B9 /* IndicatorView.xib */,
+				F4C29AE61BEE703C0007D4B9 /* loading.png */,
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

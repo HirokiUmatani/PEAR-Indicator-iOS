@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface IndicatorView : UIView
-- (id)initWithTarget:(UIViewController *)viewController
+- (id)initWithTarget:(UIView *)view
              message:(NSString *)message
      backgroundColor:(UIColor *)backgroundColor
            fontColor:(UIColor *)fontColor;

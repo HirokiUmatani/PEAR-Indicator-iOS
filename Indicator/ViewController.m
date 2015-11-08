@@ -23,7 +23,7 @@
 - (IBAction)indicatorStart:(UIButton *)sender
 {
     // create
-    _indicator = [[IndicatorView alloc]initWithTarget:self
+    _indicator = [[IndicatorView alloc]initWithTarget:self.view
                                               message:@"Now Loading ..."
                                       backgroundColor:[UIColor blackColor]
                                             fontColor:[UIColor whiteColor]];

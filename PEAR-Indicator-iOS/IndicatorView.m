@@ -11,18 +11,19 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIView *backView;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
-@property (strong,nonatomic) UIViewController *viewController;
+@property (strong,nonatomic) UIView *view;
 @end
 
 @implementation IndicatorView
-- (id)initWithTarget:(UIViewController *)viewController message:(NSString *)message backgroundColor:(UIColor *)backgroundColor fontColor:(UIColor *)fontColor
+- (id)initWithTarget:(UIView *)view
+             message:(NSString *)message backgroundColor:(UIColor *)backgroundColor fontColor:(UIColor *)fontColor
 {
     self = [super init];
     if (self)
     {
         self = [self loadXib];
         [self setInitialData];
-        [self setFrameToViewController:viewController];
+        [self setFrameToView:view];
         [self setMessage:message];
         [self setBackgroundColor:backgroundColor];
         [self setFontColor:fontColor];
@@ -42,12 +43,12 @@
                      completion:^(BOOL finished)
     {
         [self removeFromSuperview];
-        _viewController.view.userInteractionEnabled = YES;
+        _view.userInteractionEnabled = YES;
     }];
 }
 - (void)start
 {
-    _viewController.view.userInteractionEnabled = NO;
+    _view.userInteractionEnabled = NO;
     [UIView animateWithDuration:0.8
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -87,11 +88,11 @@
     if (!color)return;
     _messageLabel.textColor = color;
 }
-- (void)setFrameToViewController:(UIViewController *)viewController
+- (void)setFrameToView:(UIView *)view
 {
-    _viewController = viewController;
-    self.frame = CGRectMake(0, 0, _viewController.view.frame.size.width, _viewController.view.frame.size.height);
-    [_viewController.view addSubview:self];
+    _view = view;
+    self.frame = CGRectMake(0, 0, _view.frame.size.width, _view.frame.size.height);
+    [_view addSubview:self];
 }
 
 - (IndicatorView *)loadXib

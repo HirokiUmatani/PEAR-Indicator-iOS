@@ -15,9 +15,9 @@ pod 'PEAR-Indicator-iOS'
 ### Usage
 
 #####□import  
-<code>
- #import "IndicatorView.h"
-</code>
+``` Objective-C
+#import "IndicatorView.h"
+```
 
 #####□create instance  
 @pram  
@@ -27,13 +27,13 @@ pod 'PEAR-Indicator-iOS'
  backGroundColor:(UIColor)background color of the indicator  
  fontColor:(UIColor)Text color of the loading message  
  
-<code>
-IndicatorView *indicator = [[IndicatorView alloc]initWithTarget:self.view
-                             userEnable:YES  
-                             message:@"Now Loading .."
-                             backgroundColor:[UIColor blackColor]  
-                             fontColor:[UIColor whiteColor]];  
-</code>
+``` Objective−C
+IndicatorView *indicator = [[IndicatorView alloc]initWithTarget:self.view  
+                                                     userEnable:YES  
+                                                        message:@"Now Loading .."  
+                                                backgroundColor:[UIColor blackColor]  
+                                                      fontColor:[UIColor whiteColor]];  
+```
 
 ### Document
 [document library](http://cocoadocs.org/docsets/PEAR-Indicator-iOS)

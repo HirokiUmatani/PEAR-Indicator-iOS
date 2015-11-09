@@ -5,7 +5,7 @@
 This ios library will display the cool indicator in something load.
 
 ### Demo Screen
-[![autolayout_demo](http://pear.chat/image/indicator-demo-o.gif)]
+![autolayout_demo](http://pear.chat/image/indicator-demo-o.gif)
 
 ### Installation
 <code>

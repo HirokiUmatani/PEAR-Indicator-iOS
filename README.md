@@ -36,4 +36,7 @@ IndicatorView *indicator = [[IndicatorView alloc]initWithTarget:self.view // pas
 [MIT](https://github.com/HirokiUmatani/PEAR-Indicator-iOS/blob/master/LICENSE)
 
 ### Author
-[Hiroki Umatani](https://github.com/HirokiUmatani)
+[GitHub](https://github.com/HirokiUmatani)  
+[CocoaPod](https://cocoapods.org/owners/4170)  
+[FaceBook](https://www.facebook.com/hiroki.umatani)  
+[Twitter](https://twitter.com/pearchatHU)  
